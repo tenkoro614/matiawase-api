@@ -45,3 +45,4 @@ end
 # gem 'debugger', group: [:development, :test]
 
 gem 'grape', :git => "https://github.com/intridea/grape.git"
+gem 'pg'
