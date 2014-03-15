@@ -1,0 +1,41 @@
+<%= form_for(@matiawase) do |f| %>
+  <% if @matiawase.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@matiawase.errors.count, "error") %> prohibited this matiawase from being saved:</h2>
+
+      <ul>
+      <% @matiawase.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :groupname %><br>
+    <%= f.text_field :groupname %>
+  </div>
+  <div class="field">
+    <%= f.label :devid %><br>
+    <%= f.text_field :devid %>
+  </div>
+  <div class="field">
+    <%= f.label :username %><br>
+    <%= f.text_field :username %>
+  </div>
+  <div class="field">
+    <%= f.label :iconSelect %><br>
+    <%= f.number_field :iconSelect %>
+  </div>
+  <div class="field">
+    <%= f.label :latitude %><br>
+    <%= f.text_field :latitude %>
+  </div>
+  <div class="field">
+    <%= f.label :longitude %><br>
+    <%= f.text_field :longitude %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
