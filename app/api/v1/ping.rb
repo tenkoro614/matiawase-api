@@ -36,5 +36,28 @@ module V1
     get :hello do
       {hello: "world"}
     end
+    
+    get :push do
+      # Environment variables are automatically read, or can be overridden by any specified options. You can also
+# conveniently use `Houston::Client.development` or `Houston::Client.production`.
+APN = Houston::Client.development
+APN.certificate = File.read("#{Rails.root}/server_certificates_sandbox.pem")
+
+# An example of the token sent back when a device registers for notifications
+token = "<aa08fe0e c7e56d2e 95b9bad6 be2e4450 7e22a93c 80d8e4dd 710ec583 0603794f>"
+
+# Create a notification that alerts a message to the user, plays a sound, and sets the badge on the app
+notification = Houston::Notification.new(device: token)
+#notification.alert = "Hello, World!"
+
+# Notifications can also change the badge count, have a custom sound, indicate available Newsstand content, or pass along arbitrary data.
+#notification.badge = 100
+#notification.sound = "sosumi.aiff"
+notification.content_available = true
+#notification.custom_data = {foo: "bar"}
+
+# And... sent! That's all it takes.
+APN.push(notification)
+    end
   end
 end
