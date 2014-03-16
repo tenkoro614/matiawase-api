@@ -46,4 +46,4 @@ end
 
 gem 'pg'
 gem 'grape', :git => "https://github.com/intridea/grape.git"
-gem 'houston', :git => "https://github.com/nomad/houston.git"
+gem 'houston'
