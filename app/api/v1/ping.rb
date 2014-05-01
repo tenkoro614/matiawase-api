@@ -1,7 +1,7 @@
 module V1
   class Ping < Grape::API
     format :json
-    get "list/:groupname/:devid/:username/:iconSelect/:latitude/:longitude" do
+    get "list/:groupname/:devid/:username/:iconSelect/:latitude/:longitude/:deviceToken" do
       data = Matiawase.find(:all, :conditions => { :groupname => params[:groupname]})
       
       existuser = false;
@@ -12,6 +12,7 @@ module V1
           userlocation.iconSelect = params[:iconSelect]
           userlocation.latitude = params[:latitude]
           userlocation.longitude = params[:longitude]
+          userlocation.deviceToken = params[:deviceToken]
           userlocation.save
           existuser = true;
           break;
@@ -26,6 +27,7 @@ module V1
         userlocation.iconSelect = params[:iconSelect]
         userlocation.latitude = params[:latitude]
         userlocation.longitude = params[:longitude]
+        userlocation.deviceToken = params[:deviceToken]
         userlocation.save
         data.push(userlocation)
       end
