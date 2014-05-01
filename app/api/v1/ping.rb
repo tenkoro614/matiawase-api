@@ -54,7 +54,7 @@ module V1
 
           # Create a notification that alerts a message to the user, plays a sound, and sets the badge on the app
           notification = Houston::Notification.new(device: token)
-          #notification.alert = "Hello, World!"
+          notification.alert = "Hello, World!"
 
           # Notifications can also change the badge count, have a custom sound, indicate available Newsstand content, or pass along arbitrary data.
           #notification.badge = 1
