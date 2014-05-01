@@ -51,7 +51,7 @@ notification = Houston::Notification.new(device: token)
 #notification.alert = "Hello, World!"
 
 # Notifications can also change the badge count, have a custom sound, indicate available Newsstand content, or pass along arbitrary data.
-#notification.badge = 100
+#notification.badge = 1
 #notification.sound = "sosumi.aiff"
 notification.content_available = true
 #notification.custom_data = {foo: "bar"}
