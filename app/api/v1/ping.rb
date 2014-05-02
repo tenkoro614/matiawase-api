@@ -47,7 +47,8 @@ module V1
           # Environment variables are automatically read, or can be overridden by any specified options. You can also
           # conveniently use `Houston::Client.development` or `Houston::Client.production`.
           APN = Houston::Client.development
-          APN.certificate = File.read("#{Rails.root}/server_certificates_sandbox.pem")
+          # APN.certificate = File.read("#{Rails.root}/server_certificates_sandbox.pem")
+          APN.certificate = File.read("#{Rails.root}/server_certificates_production.pem")
 
           # An example of the token sent back when a device registers for notifications
           token = userlocation.deviceToken;
