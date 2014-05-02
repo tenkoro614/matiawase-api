@@ -1,5 +1,5 @@
 module V1
-  class Ping < Grape::API
+  class Basd < Grape::API
     format :json
     get "list/:groupname/:devid/:username/:iconSelect/:latitude/:longitude/:deviceToken" do
       data = Matiawase.find(:all, :conditions => { :groupname => params[:groupname]})
