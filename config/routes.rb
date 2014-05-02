@@ -56,5 +56,5 @@ Testapp::Application.routes.draw do
   #     resources :products
   #   end
   
-  mount TestAPI => 'api'
+  mount API => 'api'
 end
