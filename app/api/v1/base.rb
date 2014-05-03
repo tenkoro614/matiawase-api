@@ -1,7 +1,7 @@
 module V1
   class Base < Grape::API
     format :json
-    get "list/:groupname/:devid/:username/:iconSelect/:latitude/:longitude/:deviceToken" do
+    get "list/:groupname/:devid/:username/:iconSelect/:latitude/:longitude/:gpsAccuracy/:deviceToken" do
       data = Matiawase.find(:all, :conditions => { :groupname => params[:groupname]})
       
       existuser = false;
