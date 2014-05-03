@@ -17,3 +17,6 @@
 *.class
 *.pyc
 *.pyo
+server_certificates_production.pem
+server_certificates_sandbox.pem
+config/database.yml
