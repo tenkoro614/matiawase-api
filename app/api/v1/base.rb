@@ -12,6 +12,7 @@ module V1
           userlocation.iconSelect = params[:iconSelect]
           userlocation.latitude = params[:latitude]
           userlocation.longitude = params[:longitude]
+          userlocation.gpsAccuracy = params[:gpsAccuracy]
           userlocation.deviceToken = params[:deviceToken]
           userlocation.save
           existuser = true;
@@ -27,6 +28,7 @@ module V1
         userlocation.iconSelect = params[:iconSelect]
         userlocation.latitude = params[:latitude]
         userlocation.longitude = params[:longitude]
+        userlocation.gpsAccuracy = params[:gpsAccuracy]
         userlocation.deviceToken = params[:deviceToken]
         userlocation.save
         data.push(userlocation)
