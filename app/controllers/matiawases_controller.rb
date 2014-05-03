@@ -69,6 +69,6 @@ class MatiawasesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def matiawase_params
-      params.require(:matiawase).permit(:groupname, :devid, :username, :iconSelect, :latitude, :longitude, :deviceToken)
+      params.require(:matiawase).permit(:groupname, :devid, :username, :iconSelect, :latitude, :longitude, :gpsAccuracy, :deviceToken)
     end
 end
